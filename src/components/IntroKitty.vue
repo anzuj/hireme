@@ -1,9 +1,5 @@
 <template>
   <v-container>
-
-    <v-sheet class="jumboCard">
-
-  
     <v-row class="text-center">
       <v-col>
         <div class="scale-in d-flex justify-center align-center">
@@ -29,18 +25,12 @@
         <v-img :src="require('../assets/images/excited.png')" class="mb-3" contain height="200" />
       </v-col>-->
 
-      <v-col class="mb-4">
+      <v-col class="mb-0 pb-0">
         <p class="subheading font-weight-regular">
           All the reasons why you want <span class="font-weight-bold">THIS</span> front end pixie on board!
         </p>
       </v-col>
     </v-row>
-
-  </v-sheet>
-         <v-row align="center" justify="center">
-          <v-btn text>See all reasons</v-btn> <v-btn fab text aria-label="See random reason" title="See random reason"><v-icon>mdi-dice-3-outline</v-icon></v-btn>
-        </v-row>
-   
   </v-container>
 </template>
 

@@ -1,7 +1,8 @@
 <template>
 
-<v-card flat height="600" color="transparent" class="ma-12 pt-12">
-stuff
+<v-card flat height="600" color="transparent">
+    <div class="text-center pt-10" >stuff</div>
+
 </v-card>
 
 
