@@ -1,13 +1,11 @@
 <template>
 <div>
-    
-<v-card height="200" class="reasonCard ma-6 rounded-xl" flat>
-  <div class="number">#{{id}}</div>
+
 
   <v-card-text>
     Reason 1 stuff
   </v-card-text>
-</v-card>
+
 </div>
 
 
@@ -17,7 +15,7 @@
 // import HelloWorld from '@/components/HelloWorld.vue'
 export default {
     name: "",
-    props: ["id"],
+    props: [""],
     components: {
         
     },

@@ -36,9 +36,9 @@
   
       <v-row justify="center" no-gutters >
         <v-col cols="12" md="10" >
-          <v-sheet class="jumboCard-bottom" height="100vh">
+          <!-- <v-sheet class="jumboCard-bottom" height="100vh"> -->
             <ReasonsContainer />
-          </v-sheet>
+          <!-- </v-sheet> -->
         </v-col>
       </v-row>
    
@@ -96,8 +96,8 @@ export default {
 }
 
 .jumboCard-bottom {
-  border-top-left-radius: 150px !important;
-  border-top-right-radius: 150px !important;
+  border-top-left-radius: 50px !important;
+  border-top-right-radius: 50px !important;
 }
 
 .shake {
