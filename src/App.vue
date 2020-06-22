@@ -95,10 +95,10 @@ export default {
 
 }
 
-.jumboCard-bottom {
+/* .jumboCard-bottom {
   border-top-left-radius: 50px !important;
   border-top-right-radius: 50px !important;
-}
+} */
 
 .shake {
   animation: shake 0.5s;
@@ -136,6 +136,7 @@ export default {
   }
 }
 
+
 @media only screen and (max-width: 600px) {
 .jumboCard-top {
   border-bottom-left-radius: 50px !important;
@@ -143,10 +144,10 @@ export default {
 
 }
 
-.jumboCard-bottom {
+/* .jumboCard-bottom {
   border-top-left-radius: 50px !important;
   border-top-right-radius: 50px !important;
-}
+} */
 
 }
 </style>

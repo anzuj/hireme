@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="reason in reasons" :key="reason.id">
-      <v-card height="200" class="reasonCard ma-6 mb-10 rounded-xl" flat>
+      <v-card min-height="200" class="reasonCard ma-6 mb-10 rounded-xl" flat>
         <div class="number">#{{reason.id}}</div>
 
         <component :is="reason.name" class="pt-5"/>
@@ -52,11 +52,44 @@ export default {
   font-size: 55px;
   font-family: "Bungee", sans-serif;
   color: rgb(212, 130, 144);
-  text-shadow: 2px 2px #ffffff;
+  /* -webkit-text-stroke: 3px white; */
+  text-shadow:  4px -2px #ffffff;
   font-style: italic;
 }
 
 .reasonCard {
   margin-bottom: 90px !important;
 }
+
+.spin{
+    display: inline-block;
+  animation: spin 6s infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+      from { 
+            transform: rotate(0deg); 
+        } to { 
+            transform: rotate(360deg); 
+        }
+}
+
+.pulse{
+    display: inline-block;
+  animation: pulse 2s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+     transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 </style>

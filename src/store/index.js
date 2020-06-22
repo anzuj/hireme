@@ -5,11 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    mode: "all"
   },
   mutations: {
+    SET_MODE(state, mode) {
+      state.mode = mode;
+  },
   },
   actions: {
   },
-  modules: {
-  }
 })
