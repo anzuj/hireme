@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row class="text-center">
+    <v-row class="text-center" no-gutters>
       <v-col>
         <div class="scale-in d-flex justify-center align-center">
           <div id="logo1">hire</div>
@@ -25,7 +25,7 @@
         <v-img :src="require('../assets/images/excited.png')" class="mb-3" contain height="200" />
       </v-col>-->
 
-      <v-col class="mb-0 pb-0">
+      <v-col class="mt-1 mb-0 pb-0">
         <p class="subheading font-weight-regular">
           All the reasons why you want <span class="font-weight-bold">THIS</span> front end pixie on board!
         </p>
