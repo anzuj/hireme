@@ -19,6 +19,7 @@
 import Reason1 from "../components/Reasons/Reason1";
 import Reason2 from "../components/Reasons/Reason2";
 import Reason3 from "../components/Reasons/Reason3";
+import Reason4 from "../components/Reasons/Reason4";
 // import HelloWorld from '@/components/HelloWorld.vue'
 export default {
   name: "",
@@ -26,7 +27,7 @@ export default {
   components: {
     Reason1,
     Reason2,
-    Reason3
+    Reason3, Reason4
   },
   data: () => ({
     reasons: [
@@ -41,6 +42,10 @@ export default {
       {
         id: 3,
         name: "Reason3"
+      },
+        {
+        id: 4,
+        name: "Reason4"
       }
     ]
   }),
