@@ -11,7 +11,7 @@
       </v-row>
     </div> -->
 
-    <v-main id="content">
+    <v-main class="fade-in">
       <v-row justify="center" no-gutters class="ma-0 pa-0">
         <v-col cols="12" md="10" class="ma-0 pa-0">
           <v-sheet class="jumboCard-top">
@@ -21,7 +21,7 @@
       </v-row>
 
 <!-- buttons -->
-<div align="center" class="mt-n7 mb-4">
+<!-- <div align="center" class="mt-n7 mb-4">
 <v-card class="buttons rounded-xl" max-width="250" flat color="accent lighten-3">
    <div class="d-flex justify-space-between align-center my-2">
         <v-btn v-ripple="{ class: 'red--text text--lighten-4' }" rounded depressed class="mr-2" text>See all reasons</v-btn>
@@ -30,7 +30,7 @@
         </v-btn>
       </div>
 </v-card>
-</div>
+</div> -->
 <!-- /buttons -->
 
   
@@ -74,31 +74,14 @@ export default {
   font-family: Montserrat, sans-serif;
 
 }
-/* 
-#content{
-    display: flex !important;
-  height: 100vh !important;
-}
-
-#bottom{
-  flex-grow: 1 !important;
-} */
-
-.jumboCard-top, .jumboCard-bottom{
-  background-color: rgba(255, 255, 255, 0.678) !important;
-  box-shadow: 0px 0px 20px 8px rgba(150, 35, 90, 0.17) !important;
-}
 
 .jumboCard-top {
   border-bottom-left-radius: 150px !important;
   border-bottom-right-radius: 150px !important;
+    background-color: rgba(255, 255, 255, 0.678) !important;
+  box-shadow: 0px 0px 20px 8px rgba(150, 35, 90, 0.17) !important;
 
 }
-
-/* .jumboCard-bottom {
-  border-top-left-radius: 50px !important;
-  border-top-right-radius: 50px !important;
-} */
 
 .shake {
   animation: shake 0.5s;
@@ -144,10 +127,18 @@ export default {
 
 }
 
-/* .jumboCard-bottom {
-  border-top-left-radius: 50px !important;
-  border-top-right-radius: 50px !important;
-} */
+}
 
+.fade-in{
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%
+  }
 }
 </style>

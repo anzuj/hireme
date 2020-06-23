@@ -1,12 +1,17 @@
 <template>
   <div>
+       <!-- <v-scale-transition group tag="div"> -->
     <div v-for="reason in reasons" :key="reason.id">
+       
       <v-card min-height="200" class="reasonCard ma-6 mb-10 rounded-xl" flat>
         <div class="number">#{{reason.id}}</div>
 
         <component :is="reason.name" class="pt-5"/>
+       
       </v-card>
+    
     </div>
+       <!-- </v-scale-transition> -->
   </div>
 </template>
 
