@@ -27,8 +27,7 @@
 <script>
 // import HelloWorld from '@/components/HelloWorld.vue'
 export default {
-    name: "",
-    props: ["id"],
+    props: [""],
     components: {
         
     },

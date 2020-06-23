@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
 
+// globally register reasons
+import './components/Reasons/globals'
+
 Vue.config.productionTip = false
 
 new Vue({

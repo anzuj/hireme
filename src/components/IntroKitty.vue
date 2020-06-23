@@ -1,15 +1,11 @@
 <template>
-  <v-container>
+  <v-container class="mb-6">
     <v-row class="text-center" no-gutters justify="center">
-      <v-col>
-        <div class="scale-in d-flex justify-center align-center">
-          <div id="logo1">hire</div>
-          <div id="logo2">ME</div>
-        </div>
-      </v-col>
 
       <v-col cols="12" align="center">
         <div class="catContainer scale-in" >
+          <div class="hire">hire<br>Anzelika!</div>
+           <img src="../assets/images/chat.png" class="chat" height="120" alt="speech bubble" />
        
              <img src="../assets/images/tail.png" class="tail" height="38" alt="tail" />
           <img src="../assets/images/cup-right.png" class="cup-right" height="45" alt="cup" />
@@ -27,7 +23,7 @@
 
       <v-col class="mt-1 mb-0 pb-0" cols="8">
         <p class="subheading font-weight-regular">
-          Still not sure whether to give this Front End pixie a chance? Well, you're in the right place. Grab a cup of ☕ and let me do some convincing!
+          Still not sure whether to give this Front End pixie a chance? Well, you're in the right place. Grab a cup ☕ and let me do some convincing!
         </p>
       </v-col>
     </v-row>
@@ -69,6 +65,25 @@ export default {
   width: 256px;
 }
 
+.chat{
+  position: absolute;
+  z-index: 605;
+  right: -50px;
+  transform: rotate(4deg) 
+}
+.hire{
+  font-family: "Freckle Face", sans-serif;
+  font-size: 24px;
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  line-height:1;
+  background-color: transparent;
+  top: 25px;
+  z-index: 606;
+  right: -44px;
+  transform: rotate(4deg) 
+}
 
 .cup-left,
 .cup-right {

@@ -1,7 +1,7 @@
 <template>
 <div>
   <v-card-text>
-I'm an opensource contributor.
+Reason 5 stuff
   </v-card-text>
 </div>
 
@@ -10,7 +10,6 @@ I'm an opensource contributor.
 <script>
 // import HelloWorld from '@/components/HelloWorld.vue'
 export default {
-    name: "",
     props: [""],
     components: {
         
