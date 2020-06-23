@@ -1,10 +1,7 @@
 import Vue from 'vue'
+import store from '../../store'
 
-// Globally register all base components for convenience, because they
-// will be used very frequently. Components are registered using the
-// PascalCased version of their file name.
 
-// https://webpack.js.org/guides/dependency-management/#require-context
 const requireComponent = require.context(
   // Look for files in the current directory
   '.',
@@ -14,14 +11,17 @@ const requireComponent = require.context(
   /Reason-[\w-]+\.vue$/
 )
 
+
+
 // For each matching file name...
 requireComponent.keys().forEach((fileName) => {
+  store.commit("INCREASE_REASON_AMOUNT")
   // Get the component config
   const componentConfig = requireComponent(fileName)
   // Get the component name
   const componentName = fileName
-    // Remove the "./" from the beginning - did I do this right?
-    .replace(/^\.\/, '')
+    // Remove the "./" from the beginning
+    .replace(/^\.\//, '')
     // Remove the file extension from the end
     .replace(/\.\w+$/, '')
 

@@ -1,58 +1,36 @@
 <template>
-  <div>
-      
-      {{reasons}}
-
-      <!-- <reason1/> -->
-    <!-- <div v-for="reason in reasons" :key="reason.id">
-       
+  <v-row justify="center">
+    <v-col cols="12" sm="10">
+    <div v-for="reason in reasons" :key="reason.id">
       <v-card min-height="200" class="reasonCard ma-6 mb-10 rounded-xl" flat>
         <div class="number">#{{reason.id}}</div>
-
-        <component :is="reason.name" class="pt-5"/>
-
-        <component :is="dynamicComponent(reason.id)" class="pt-5"></component>
-       
+        <component :is="reason.name" class="pt-5" />
       </v-card>
-    
-    </div> -->
- 
-  </div>
+    </div>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
-// import Reason1 from "../components/Reasons/Reason1";
-// import Reason2 from "../components/Reasons/Reason2";
-// import Reason3 from "../components/Reasons/Reason3";
-// import Reason4 from "../components/Reasons/Reason4";
-// import HelloWorld from '@/components/HelloWorld.vue'
 export default {
   name: "",
   props: [""],
-  components: {
- 
-  },
+  components: {},
   data: () => ({
-      reasons: [],
+    reasons: []
   }),
-  methods: {
-    //       dynamicComponent(id) {
-    //   return () => import(`@/components/reasons/Reason${id}`);
-    // }
+  methods: {},
+  mounted() {
+    // generating an array of globally registered reasons to render in template
+    for (let i = 1; i <= this.$store.state.reasonsAmount; i++) {
+      this.reasons.push({
+        id: i,
+        name: `Reason-${i}`
+      });
+    }
   },
-mounted(){
-          for (let i = 1; i <= 4; i++) {
-              this.reasons.push({
-                  id: i,
-                  name: `Reason${i}`
-              })
-          }
-         
-      
-},
   computed: {
-      
-   
+
   }
 };
 </script>
@@ -66,7 +44,7 @@ mounted(){
   font-family: "Bungee", sans-serif;
   color: rgb(212, 130, 144);
   /* -webkit-text-stroke: 3px white; */
-  text-shadow:  4px -2px #ffffff;
+  text-shadow: 4px -2px #ffffff;
   font-style: italic;
 }
 
@@ -74,21 +52,22 @@ mounted(){
   margin-bottom: 90px !important;
 }
 
-.spin{
-    display: inline-block;
+.spin {
+  display: inline-block;
   animation: spin 6s infinite;
   animation-timing-function: linear;
 }
 @keyframes spin {
-      from { 
-            transform: rotate(0deg); 
-        } to { 
-            transform: rotate(360deg); 
-        }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.pulse{
-    display: inline-block;
+.pulse {
+  display: inline-block;
   animation: pulse 2s infinite;
   animation-timing-function: linear;
 }
@@ -98,11 +77,10 @@ mounted(){
     transform: scale(1);
   }
   50% {
-     transform: scale(1.2);
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
   }
 }
-
 </style>
