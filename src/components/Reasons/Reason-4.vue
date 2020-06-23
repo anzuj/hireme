@@ -10,7 +10,6 @@ I'm an opensource contributor.
 <script>
 // import HelloWorld from '@/components/HelloWorld.vue'
 export default {
-    name: "",
     props: [""],
     components: {
         

@@ -24,7 +24,6 @@ While cats are my favourite subject (duh!), I'll happily get my hands dirty with
 <script>
 // import HelloWorld from '@/components/HelloWorld.vue'
 export default {
-    name: "",
     props: [""],
     components: {
         
