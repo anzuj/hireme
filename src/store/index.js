@@ -11,10 +11,10 @@ export default new Vuex.Store({
   mutations: {
     SET_MODE(state, mode) {
       state.mode = mode;
-  },
-  INCREASE_REASON_AMOUNT(state) {
-    state.reasonsAmount ++
-},
+    },
+    INCREASE_REASON_AMOUNT(state) {
+      state.reasonsAmount++
+    },
   },
   actions: {
   },

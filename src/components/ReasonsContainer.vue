@@ -1,12 +1,25 @@
 <template>
   <v-row justify="center">
     <v-col cols="12" sm="10">
-    <div v-for="reason in reasons" :key="reason.id">
-      <v-card min-height="200" class="reasonCard ma-6 mb-10 rounded-xl pt-4" flat>
-        <div class="number">#{{reason.id}}</div>
-        <component :is="reason.name" class="pt-5"/>
-      </v-card>
-    </div>
+      <!-- all reasons -->
+      <div v-show="mode==='all'">
+        <div v-for="reason in reasons" :key="reason.id">
+          <v-card min-height="200" class="reasonCard ma-6 mb-10 rounded-xl pt-4" flat>
+           <a :href="`#reason-${reason.id}`" > <div class="number" :id="`reason-${reason.id}`">#{{reason.id}}</div></a>
+            <component :is="reason.name" class="pt-5" />
+          </v-card>
+        </div>
+      </div>
+      <!-- /all reasons -->
+
+      <!-- random 1 reason -->
+      <!-- <div v-show="mode==='random'">
+        <v-card min-height="200" class="reasonCard ma-6 mb-10 rounded-xl pt-4" flat>
+          <div class="number">#{{random.id}}</div>
+          <component :is="random.name" class="pt-5" />
+        </v-card>
+      </div> -->
+      <!-- random 1 reason -->
     </v-col>
   </v-row>
 </template>
@@ -17,7 +30,8 @@ export default {
   props: [""],
   components: {},
   data: () => ({
-    reasons: []
+    reasons: [],
+    mode: "all"
   }),
   methods: {},
   mounted() {
@@ -30,7 +44,9 @@ export default {
     }
   },
   computed: {
-
+    // mode(){
+    //   return this.$store.state.mode
+    // }
   }
 };
 </script>
