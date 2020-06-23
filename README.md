@@ -1,19 +1,12 @@
-# hireme
+# Project to showcase all the reasons you should get hired!
 
-## Project setup
-```
-npm install
-```
+## Technologies used:
+* VueJS
+* Vuetify
+* Vuex
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Customize for yourself
+Code has been built to automatically detect any components in `components/Reasons` directory as long as the filename follows format `Reason-1.vue`, `Reason-2.vue` etc. 
+<img src="https://i.ibb.co/q1Nbr98/reasons.png" width="400">
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Each of these components will be registered as a global component and will automatically be rendered in a styled list to showcase your best bits!

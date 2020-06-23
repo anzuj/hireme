@@ -2,9 +2,9 @@
   <v-row justify="center">
     <v-col cols="12" sm="10">
     <div v-for="reason in reasons" :key="reason.id">
-      <v-card min-height="200" class="reasonCard ma-6 mb-10 rounded-xl" flat>
+      <v-card min-height="200" class="reasonCard ma-6 mb-10 rounded-xl pt-4" flat>
         <div class="number">#{{reason.id}}</div>
-        <component :is="reason.name" class="pt-5" />
+        <component :is="reason.name" class="pt-5"/>
       </v-card>
     </div>
     </v-col>
@@ -48,9 +48,9 @@ export default {
   font-style: italic;
 }
 
-.reasonCard {
-  margin-bottom: 90px !important;
-}
+/* .reasonCard{
+  padding-top: 20px;
+} */
 
 .spin {
   display: inline-block;

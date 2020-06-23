@@ -15,6 +15,7 @@ const requireComponent = require.context(
 
 // For each matching file name...
 requireComponent.keys().forEach((fileName) => {
+  // Update number of reasons in Vuex
   store.commit("INCREASE_REASON_AMOUNT")
   // Get the component config
   const componentConfig = requireComponent(fileName)
