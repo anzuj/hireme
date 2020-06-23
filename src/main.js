@@ -7,11 +7,14 @@ import vuetify from './plugins/vuetify';
 // globally register reasons
 import './components/Reasons/globals'
 
+import i18n from './i18n'
+
 Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
   vuetify,
+  i18n,
   render: function (h) { return h(App) }
 }).$mount('#app')
