@@ -11,10 +11,10 @@
       </v-row>
     </div> -->
 
-    <v-main class="fade-in">
+    <v-main>
       <v-row justify="center" no-gutters class="ma-0 pa-0">
         <v-col cols="12" md="10" class="ma-0 pa-0">
-          <v-sheet class="jumboCard-top">
+          <v-sheet class="fade-in jumboCard-top">
             <IntroKitty />
           </v-sheet>
         </v-col>
