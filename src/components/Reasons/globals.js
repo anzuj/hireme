@@ -11,8 +11,6 @@ const requireComponent = require.context(
   /Reason-[\w-]+\.vue$/
 )
 
-
-
 // For each matching file name...
 requireComponent.keys().forEach((fileName) => {
   // Update number of reasons in Vuex
@@ -25,7 +23,6 @@ requireComponent.keys().forEach((fileName) => {
     .replace(/^\.\//, '')
     // Remove the file extension from the end
     .replace(/\.\w+$/, '')
-
 
   // Globally register the component
   Vue.component(componentName, componentConfig.default || componentConfig)

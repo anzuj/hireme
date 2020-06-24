@@ -93,14 +93,15 @@ export default {
   animation: shake 0.4s;
 }
 
-.v-btn::before {
+.buttons .v-btn::before {
   background: transparent !important;
 }
 
-.v-btn{
+/* .v-btn{
   transition: all 0.15s linear;
-}
-.v-btn:hover {
+} */
+
+.buttons .v-btn:hover {
   color: rgb(172, 87, 101) !important;
   font-weight: bold;
 }

@@ -3,6 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
+import "prismjs";
+import "prismjs/themes/prism.css";
+import "prismjs/components/prism-scss.min";
+import Prism from "vue-prism-component";
+Vue.component("prism", Prism);
 
 
 // globally register reasons
