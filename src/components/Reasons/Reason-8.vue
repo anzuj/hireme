@@ -1,13 +1,7 @@
 <template>
-  <v-card-text>This very website! DRY coding practices, automatic component registering to display all reasons and easy to maintain when you need to add a new one.
+  <v-card-text>This very website! 
+    I took the opportunity to create something truly well maintainable and code as DRY as possible. None of these <b>{{nr}}</b> awesome reason cards are hardcoded
 
-      <pre><code class="language-html">
-        <template>
-  <v-card-text>This very website! DRY coding practices, automatic component registering to display all reasons and easy to maintain when you need to add a new one.
-
-  </v-card-text>
-</template>
-</code></pre>
   </v-card-text>
 
 
@@ -22,7 +16,11 @@ export default {
   components: {},
   data: () => ({}),
   methods: {},
-  computed: {}
+  computed: {
+    nr(){
+      return this.$store.state.reasonsAmount
+    }
+  }
 };
 </script>
 
