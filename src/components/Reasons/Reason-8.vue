@@ -1,8 +1,8 @@
 <template>
   <v-card-text>This very website! 
-    I took the time to research and make this project into something well maintainable. For example none of these <b>{{nr}}</b> awesome reason cards are hardcoded. Every reason is a separate component (<a href="https://github.com/anzuj/hireme/tree/master/src/components/Reasons" target="_blank">GitHub link</a>) and they're  <a href="https://github.com/anzuj/hireme/blob/master/src/components/Reasons/globals.js" target="_blank">registered globally</a>.<br><br>
+    I took the time to research and make this project into something well maintainable. For example none of these <b>{{nr}}</b> reason cards are hardcoded. Every reason is a separate component and they're  <a href="https://github.com/anzuj/hireme/blob/master/src/components/Reasons/globals.js" target="_blank">registered globally</a> by going through the components/Reasons folder.<br><br>
      <!-- <prism language="js">{{ js }}</prism> -->
-     With a dash of Vuex magic I'm also automatically registering the number of reasons, allowing me to render them all automatically.
+     With a dash of Vuex magic I'm also keeping track of the number of reasons, allowing me to render them all automatically.
 
  <!-- <prism>{{ loop }}</prism>
 <prism language="html">mounted() { 

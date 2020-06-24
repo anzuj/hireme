@@ -11,7 +11,7 @@
       </v-row>
     </div> -->
 
-    <v-main>
+    <v-main transition="fade-transition">
       <v-row justify="center" no-gutters class="ma-0 pa-0">
         <v-col cols="12" md="10" class="ma-0 pa-0">
           <v-sheet class="fade-in jumboCard-top">

@@ -1,6 +1,6 @@
 <template>
   <v-card-text>
-      Your project needs internatilisation in Front End codebase? Worry not 👌
+      Your project needs internationalisation in Front End codebase? Worry not 👌
 
       <v-card outlined class="mt-2 pa-2 pb-0">
 <v-row justify="space-between" no-gutters>
