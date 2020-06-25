@@ -7,15 +7,9 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: () => import('../components/IntroKitty.vue'),
+    component: () => import('@/App.vue'),
   },
-  {
-    path: '/about',
-    name: 'About',
-    component: function () {
-      return import('../views/About.vue')
-    }
-  }
+
 ]
 
 const router = new VueRouter({
