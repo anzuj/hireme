@@ -5,7 +5,7 @@
       <div v-show="mode==='all'">
         <div v-for="reason in reasons" :key="reason.id">
           <v-card min-height="200" class="fade-in reasonCard ma-6 mb-10 rounded-xl pt-4" flat>
-           <a :href="`#reason-${reason.id}`" > <div class="number" :id="`reason-${reason.id}`">#{{reason.id}}</div></a>
+          <div @click="$vuetify.goTo(`#reason-${reason.id}`)" class="number" :id="`reason-${reason.id}`">#{{reason.id}}</div>
             <component :is="reason.name" class="pt-5" />
           </v-card>
         </div>
@@ -34,6 +34,7 @@ export default {
         name: `Reason-${i}`
       });
     }
+    this.$vuetify.goTo(this.$route.hash)
   },
   computed: {
     // mode(){
