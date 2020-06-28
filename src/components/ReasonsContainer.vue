@@ -1,11 +1,21 @@
 <template>
   <v-row justify="center" no-gutters>
     <v-col cols="12" sm="10">
+      <!-- <v-select
+      :items="reasons"
+      return-object
+      item-text="name">
+      <template v-slot:item>
+<div>{{item}} <v-icon>mdi-account-plus</v-icon>
+
+</div>
+      </template>
+      </v-select> -->
       <!-- all reasons -->
       <div v-show="mode==='all'">
         <div v-for="reason in reasons" :key="reason.id">
           <v-card min-height="200" class="fade-in reasonCard ma-6 mb-10 rounded-xl pt-4" flat>
-          <div @click="$vuetify.goTo(`#reason-${reason.id}`)" class="number" :id="`reason-${reason.id}`">#{{reason.id}}</div>
+           <a :href="`#reason-${reason.id}`" > <div class="number" :id="`reason-${reason.id}`">#{{reason.id}}</div></a>
             <component :is="reason.name" class="pt-5" />
           </v-card>
         </div>
@@ -34,7 +44,7 @@ export default {
         name: `Reason-${i}`
       });
     }
-    this.$vuetify.goTo(this.$route.hash)
+    // this.$vuetify.goTo(this.$route.hash)
   },
   computed: {
     // mode(){
