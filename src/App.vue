@@ -4,11 +4,11 @@
             <v-row justify="center" no-gutters class="ma-0 pa-0">
                 <v-col cols="12" md="10" class="ma-0 pa-0">
                     <v-sheet class="jumboCard-top">
-                        <!-- <v-row dense justify="end">
+                        <v-row dense justify="end">
                          
 
                             <v-btn
-                                color="primary lighten-2"
+                                color="accent"
                                 small
                                 class
                                 href="https://anzudev.com"
@@ -18,7 +18,7 @@
                                 <span class="mr-2">PORTFOLIO</span>
                                 <v-icon small>mdi-open-in-new</v-icon>
                             </v-btn>
-                        </v-row> -->
+                        </v-row>
                         <IntroKitty />
                     </v-sheet>
                 </v-col>
