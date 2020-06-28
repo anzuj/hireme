@@ -7,11 +7,12 @@
             hire
             <br />Anzelika!
           </div>
+          <img src="../assets/images/eyes.png" class="eyes" height="30" alt="eyes" />
           <img src="../assets/images/chat.png" class="chat" height="120" alt="speech bubble" />
           <img src="../assets/images/tail.png" class="tail" height="38" alt="tail" />
           <img src="../assets/images/cup-right.png" class="cup-right" height="45" alt="cup" />
           <img src="../assets/images/cup-left.png" class="cup-left" height="45" alt="cup" />
-          <img src="../assets/images/cat.png" class="cat" height="230" alt="cat" />
+          <img src="../assets/images/cat-no-eyes.png" class="cat" height="230" alt="cat" />
         </div>
       </v-col>
 
@@ -71,6 +72,15 @@ export default {
   transform: rotate(4deg);
 }
 
+.eyes{
+  position: absolute;
+  top: 50%;
+  left: 36.5%;
+  z-index: 606;
+  transform-origin: 50%;
+  animation: blink 3s infinite;
+}
+
 .cup-left,
 .cup-right {
   animation: coffee 2s infinite;
@@ -95,7 +105,7 @@ export default {
   right: 20%;
   z-index: 599;
   transform-origin: left center;
-  animation: tail 2.5s infinite;
+  animation: tail 3s infinite;
 }
 
 .cat {
@@ -120,7 +130,8 @@ export default {
     transform: rotate(0);
   }
   50% {
-    transform: rotate(15deg);
+    transform: rotate(12deg);
+    right: 22%;
   }
   100% {
     transform: rotate(0);
@@ -139,5 +150,15 @@ export default {
     transform: scale(1);
     opacity: 100%;
   }
+}
+
+@keyframes blink {
+  0%, 100% {
+        transform: scale(1, .05);
+    }
+    5%,
+    95% {
+        transform: scale(1, 1);
+    }
 }
 </style>

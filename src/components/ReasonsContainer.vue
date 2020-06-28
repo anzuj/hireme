@@ -1,6 +1,6 @@
 <template>
     <v-row justify="center" no-gutters>
-      <v-row justify="center" class="mb-2">
+      <v-row justify="center" class="mb-2" no-gutters>
         <v-btn small color="accent darken-1"  v-for="reason in reasons" :key="reason.id" class="ma-1 rounded-pill" @click="$vuetify.goTo(`#reason-${reason.id}`)">#{{reason.id}}</v-btn>
       </v-row>
         <v-col cols="12" sm="10">

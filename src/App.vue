@@ -4,7 +4,7 @@
             <v-row justify="center" no-gutters class="ma-0 pa-0">
                 <v-col cols="12" md="10" class="ma-0 pa-0">
                     <v-sheet class="jumboCard-top">
-                        <v-row dense justify="end">
+                        <v-row dense justify="end" no-gutters>
                          
 
                             <v-btn
