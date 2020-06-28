@@ -5,8 +5,6 @@
                 <v-col cols="12" md="10" class="ma-0 pa-0">
                     <v-sheet class="jumboCard-top">
                         <v-row dense justify="end" no-gutters>
-                         
-
                             <v-btn
                                 color="accent"
                                 small
@@ -43,6 +41,21 @@
                 </v-col>
             </v-row>
         </v-main>
+
+        <v-btn
+            v-scroll="onScroll"
+            v-show="fab"
+            fab
+            dark
+            fixed
+            bottom
+            right
+            color="teal"
+            @click="toTop"
+            class="fade-in"
+        >
+            <v-icon>mdi-chevron-up</v-icon>
+        </v-btn>
     </v-app>
 </template>
 
@@ -59,8 +72,18 @@ export default {
     },
 
     data: () => ({
-        //
-    })
+        fab: false
+    }),
+    methods: {
+        onScroll(e) {
+            if (typeof window === "undefined") return;
+            const top = window.pageYOffset || e.target.scrollTop || 0;
+            this.fab = top > 20;
+        },
+        toTop() {
+            this.$vuetify.goTo(0);
+        }
+    }
 };
 </script>
 
