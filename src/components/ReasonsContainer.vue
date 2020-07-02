@@ -1,21 +1,14 @@
 <template>
     <v-row justify="center" no-gutters>
       <v-row justify="center" class="mb-2" no-gutters>
-        <v-btn small color="accent darken-1"  v-for="reason in reasons" :key="reason.id" class="ma-1 rounded-pill" @click="$vuetify.goTo(`#reason-${reason.id}`)">#{{reason.id}}</v-btn>
+          <!-- these buttons need to scroll down to the id with an animation -->
+          <a :href="`#reason-${reason.id}`" v-for="reason in reasons" :key="reason.id" class="text-decoration-none">
+        <v-btn small color="teal" dark class="ma-1 rounded-pill" >#{{reason.id}}</v-btn>
+        </a>
       </v-row>
         <v-col cols="12" sm="10">
-            <!-- <v-select
-      :items="reasons"
-      return-object
-      item-text="name">
-      <template v-slot:item>
-<div>{{item}} <v-icon>mdi-account-plus</v-icon>
 
-</div>
-      </template>
-      </v-select> -->
             <!-- all reasons -->
-            <div v-show="mode === 'all'">
                 <div v-for="reason in reasons" :key="reason.id">
                     <v-card
                         min-height="200"
@@ -25,13 +18,12 @@
                         <a :href="`#reason-${reason.id}`">
                             <div class="number" :id="`reason-${reason.id}`">
                                 #{{ reason.id }}
-                            </div></a
-                        >
+                            </div></a>
                         <component :is="reason.name" class="pt-5" />
                     </v-card>
-                </div>
-            </div>
+                </div>  
             <!-- /all reasons -->
+
         </v-col>
     </v-row>
 </template>
@@ -43,7 +35,6 @@ export default {
     components: {},
     data: () => ({
         reasons: [],
-        mode: "all"
     }),
     methods: {},
     mounted() {
@@ -54,12 +45,10 @@ export default {
                 name: `Reason-${i}`
             });
         }
+        // enabling this creates console error on mount Error in created hook: "Error: Target element "#reason-5" not found."
         // this.$vuetify.goTo(this.$route.hash)
     },
     computed: {
-        // mode(){
-        //   return this.$store.state.mode
-        // }
     }
 };
 </script>

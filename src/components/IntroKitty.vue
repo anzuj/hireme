@@ -2,6 +2,7 @@
   <v-container class="mb-6">
     <v-row class="text-center" no-gutters justify="center">
       <v-col cols="12" align="center">
+        <a href="/">
         <div class="catContainer scale-in">
           <div class="hire">
             hire
@@ -14,6 +15,7 @@
           <img src="../assets/images/cup-left.png" class="cup-left" height="45" alt="cup" />
           <img src="../assets/images/cat-no-eyes.png" class="cat" height="230" alt="cat" />
         </div>
+        </a>
       </v-col>
 
       <v-col class="mt-1 mb-0 pb-0" cols="8">
