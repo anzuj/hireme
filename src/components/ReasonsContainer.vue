@@ -73,7 +73,8 @@ export default {
 
 .navbtn {
     position: relative;
-    transition: 0.12s linear;
+    transition: all 0.12s linear;
+    bottom: 0;
 }
 .navbtn:hover {
     background-color: #61b8a5 !important;

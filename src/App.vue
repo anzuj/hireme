@@ -1,8 +1,8 @@
 <template>
     <v-app id="app">
-        <v-fade-transition mode="out-in">
-            <router-view></router-view>
-        </v-fade-transition>
+
+            <Home/>
+
         <v-btn
             v-scroll="onScroll"
             v-show="fab"
@@ -21,10 +21,13 @@
 </template>
 
 <script>
+import Home from "@/components/Home";
 export default {
     name: "App",
 
-    components: {},
+    components: {
+        Home
+    },
 
     data: () => ({
         fab: false
