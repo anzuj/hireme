@@ -12,7 +12,7 @@
             bottom
             right
             color="teal"
-            @click="toTop"
+            href="#portfolio"       
             class="fade-in"
         >
             <v-icon>mdi-chevron-up</v-icon>
@@ -21,8 +21,6 @@
 </template>
 
 <script>
-// import Home from "@/views/Home";
-
 export default {
     name: "App",
 
@@ -36,9 +34,6 @@ export default {
             if (typeof window === "undefined") return;
             const top = window.pageYOffset || e.target.scrollTop || 0;
             this.fab = top > 20;
-        },
-        toTop() {
-            this.$vuetify.goTo(0);
         }
     }
 };
@@ -52,4 +47,9 @@ export default {
         linear-gradient(135deg, #fff886 10%, #f072b6 100%) fixed;
     font-family: Montserrat, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 </style>
