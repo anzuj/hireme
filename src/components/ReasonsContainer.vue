@@ -1,35 +1,34 @@
 <template>
-    <v-row justify="center" no-gutters>
-      <v-row justify="center" class="mb-2" no-gutters>
-        <v-btn small color="accent darken-1"  v-for="reason in reasons" :key="reason.id" class="ma-1 rounded-pill" @click="$vuetify.goTo(`#reason-${reason.id}`)">#{{reason.id}}</v-btn>
-      </v-row>
-        <v-col cols="12" sm="10">
-            <!-- <v-select
-      :items="reasons"
-      return-object
-      item-text="name">
-      <template v-slot:item>
-<div>{{item}} <v-icon>mdi-account-plus</v-icon>
+    <v-row justify="center" no-gutters id="reasons">
+        <!-- nav buttons -->
+        <v-row justify="center" class="mb-2" no-gutters>
+            <a
+                :href="reason.href"
+                v-for="reason in reasons"
+                :key="reason.id"
+                class="text-decoration-none"
+            >
+                <v-btn small color="teal" dark class="ma-1 rounded-pill navbtn"
+                    >#{{ reason.id }}</v-btn
+                >
+            </a>
+        </v-row>
 
-</div>
-      </template>
-      </v-select> -->
+        <v-col cols="12" sm="10">
             <!-- all reasons -->
-            <div v-show="mode === 'all'">
-                <div v-for="reason in reasons" :key="reason.id">
-                    <v-card
-                        min-height="200"
-                        class="fade-in reasonCard ma-6 mb-10 rounded-xl pt-4"
-                        flat
+            <div v-for="reason in reasons" :key="reason.id">
+                <v-card
+                    min-height="200"
+                    class="fade-in reasonCard ma-6 mb-10 rounded-xl pt-4"
+                    flat
+                >
+                    <a :href="`#reason-${reason.id}`">
+                        <div class="number" :id="`reason-${reason.id}`">
+                            #{{ reason.id }}
+                        </div></a
                     >
-                        <a :href="`#reason-${reason.id}`">
-                            <div class="number" :id="`reason-${reason.id}`">
-                                #{{ reason.id }}
-                            </div></a
-                        >
-                        <component :is="reason.name" class="pt-5" />
-                    </v-card>
-                </div>
+                    <component :is="reason.name" class="pt-5" />
+                </v-card>
             </div>
             <!-- /all reasons -->
         </v-col>
@@ -42,8 +41,7 @@ export default {
     props: [""],
     components: {},
     data: () => ({
-        reasons: [],
-        mode: "all"
+        reasons: []
     }),
     methods: {},
     mounted() {
@@ -51,16 +49,12 @@ export default {
         for (let i = 1; i <= this.$store.state.reasonsAmount; i++) {
             this.reasons.push({
                 id: i,
-                name: `Reason-${i}`
+                name: `Reason-${i}`,
+                href: `#reason-${i}`
             });
         }
-        // this.$vuetify.goTo(this.$route.hash)
     },
-    computed: {
-        // mode(){
-        //   return this.$store.state.mode
-        // }
-    }
+    computed: {}
 };
 </script>
 
@@ -77,9 +71,14 @@ export default {
     font-style: italic;
 }
 
-/* .reasonCard{
-  padding-top: 20px;
-} */
+.navbtn {
+    position: relative;
+    transition: 0.12s linear;
+}
+.navbtn:hover {
+    background-color: #61b8a5 !important;
+    bottom: 3px;
+}
 
 .spin {
     display: inline-block;
