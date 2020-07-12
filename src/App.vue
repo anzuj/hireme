@@ -5,6 +5,8 @@
 
         <v-btn
             v-scroll="onScroll"
+            aria-label="scroll back up"
+            title="scroll back up"
             v-show="fab"
             fab
             dark

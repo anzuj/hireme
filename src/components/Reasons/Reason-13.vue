@@ -1,6 +1,7 @@
 <template>
     <v-card-text>
-        <b>Mobile responsiveness</b>.I've seen plenty of cringeworthy sites with no
+        <strong>Mobile responsiveness</strong> <br>
+        I've seen plenty of cringeworthy sites with no
         consideration to mobile browsers. 55% of the web is handled in the palm
         of the hand, therefore I make sure that whatever I produce looks good
         regardless of the screen size.
